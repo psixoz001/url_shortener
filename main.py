@@ -1,6 +1,7 @@
 from flask import Flask, request, redirect, jsonify, make_response
 from flask_jwt_extended import create_access_token, JWTManager, get_jwt_identity, jwt_required
 import uuid, hashlib, random
+import database
 from werkzeug.security import generate_password_hash, check_password_hash
 from database.CreateDB import createDB
 from functions.fn_db import  *
