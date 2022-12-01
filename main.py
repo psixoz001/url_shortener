@@ -12,7 +12,7 @@ jwt = JWTManager(app)
 @app.route('/register', methods = ["post"])
 def registration():
     if request.method == 'POST':
-        email = str(request.json.get('login', None))
+        email = str(request.json.get('email', None))
         password = str(request.json.get('password', None))
         return make_response(database.registration(email, password))
 
